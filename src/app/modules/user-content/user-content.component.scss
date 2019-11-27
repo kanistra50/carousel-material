@@ -1,0 +1,39 @@
+:host {
+
+  width: 100%;
+
+  .user-content {
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      min-width: 320px;
+      background: ghostwhite;
+      border-radius: 4px;
+      box-shadow: 1px 1px 20px lightgrey;
+    }
+
+    &__title {
+
+      &-text {
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+
+    &__container {
+
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .user-content__title-text {
+      font-size: 16px;
+    }
+  }
+}
+
+
