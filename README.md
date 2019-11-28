@@ -1,6 +1,7 @@
 # carousel-material
 
 The assignment is to build A carousel as designed below that allows the user to navigate through the content from portfolio.json.
+[Carousel](https://www.primefaces.org/primeng/#/carousel)
 
 # The solution has the following requirements: 
 
@@ -17,6 +18,7 @@ The assignment is to build A carousel as designed below that allows the user to 
 - The carousel and the content displayed below should be in separate components
 
 - The carousel should look as much like the design as possible.
+
 
 
 ## 
