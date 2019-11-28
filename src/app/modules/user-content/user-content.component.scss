@@ -7,12 +7,13 @@
     &__wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       margin: auto;
       padding: 20px;
       min-width: 320px;
-      background: ghostwhite;
+      min-height: 320px;
+      background: white;
       border-radius: 4px;
       box-shadow: 1px 1px 20px lightgrey;
     }

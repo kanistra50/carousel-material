@@ -1,11 +1,15 @@
-<div class="custom-carousel-item">
+<div class="back-overlay"></div>
+<div class="custom-carousel-item" [ngClass]="{selected: item.isCurrentlySelected}">
   <div class="custom-carousel-item__title">{{ item.title }}</div>
   <div class="custom-carousel-item__client">
-    <span>{{ item.client }}</span>
+
+    <span *ngIf="item.client">{{ item.client }}</span>
+
     <img *ngIf="item.isAlreadyViewed; else notViewed" src="../../assets/check-symbol.svg">
     <ng-template #notViewed>
-      <span>...</span>
+      <span class="dots">...</span>
     </ng-template>
-  </div>
 
+  </div>
 </div>
+
