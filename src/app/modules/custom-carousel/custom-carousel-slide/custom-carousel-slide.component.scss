@@ -21,13 +21,13 @@
     width: 100%;
     height: 100%;
     bottom: 0;
-    z-index: 10;
     border: 0.5px solid $itemColor;
     background: $itemColor;
     color: rgba(0,0,0,0.7);
 
     &:hover {
       background: whitesmoke;
+      border-color: whitesmoke;
       cursor: pointer;
     }
 
@@ -37,8 +37,11 @@
       background: $itemColor;
       transform: translateY(-4px);
       transition: transform 255ms ease-out;
+      z-index: 100;
+
       &:hover {
         background: $itemColor;
+        border-color: inherit;
       }
 
       .custom-carousel-item {
