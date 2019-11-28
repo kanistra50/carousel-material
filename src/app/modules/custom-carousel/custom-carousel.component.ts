@@ -1,6 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {PortfolioService} from '../../services/portfolio.service';
 import {Portfolio} from '../../models/Portfolio.model';
+import {SelectedPortfolioService} from '../../services/selected-portfolio.service';
 
 @Component({
   selector: 'app-custom-carousel',
@@ -12,7 +13,10 @@ import {Portfolio} from '../../models/Portfolio.model';
 
 export class CustomCarouselComponent implements OnInit {
   selectedPortfolio: Portfolio;
-  constructor(private protfolioService: PortfolioService) {}
+  constructor(
+    private protfolioService: PortfolioService,
+    private selectedPortfolioService: SelectedPortfolioService,
+  ) {}
 
   portfolios: Portfolio[];
 
@@ -31,6 +35,8 @@ export class CustomCarouselComponent implements OnInit {
     }
     this.selectedPortfolio = p;
     this.selectedPortfolio.isCurrentlySelected = true;
+
+    this.selectedPortfolioService.setPortfolio(this.selectedPortfolio);
   }
 
   private _markSelectedAsViewed() {

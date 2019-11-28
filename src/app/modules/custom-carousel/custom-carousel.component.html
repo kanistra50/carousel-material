@@ -9,14 +9,3 @@
 
   </ng-template>
 </p-carousel>
-
-<ng-container *ngIf="selectedPortfolio">
-  <div class="portfolio-content" *ngIf="selectedPortfolio.content; else noContent">
-    {{ selectedPortfolio.content }}
-  </div>
-  <ng-template #noContent>
-    <span class="no-content">'{{ selectedPortfolio.title }}' portfolio has no content</span>
-  </ng-template>
-</ng-container>
-
-

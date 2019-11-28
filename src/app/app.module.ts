@@ -7,6 +7,7 @@ import {ToolbarComponent} from './components/toolbar/toolbar.component';
 import {FooterEmblemComponent} from './components/footer-emblem/footer-emblem.component';
 import {JsonFileReaderService} from './services/json-file-reading.service';
 import {CustomCarouselModule} from './modules/custom-carousel/custom-carousel.module';
+import {SelectedPortfolioService} from './services/selected-portfolio.service';
 
 const components = [
   AppComponent,
@@ -23,7 +24,8 @@ const components = [
     CustomCarouselModule,
   ],
   providers: [
-    JsonFileReaderService
+    JsonFileReaderService,
+    SelectedPortfolioService
   ],
   bootstrap: [AppComponent]
 })
