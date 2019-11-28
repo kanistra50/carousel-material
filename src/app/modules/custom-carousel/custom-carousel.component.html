@@ -1,25 +1,12 @@
 <p-carousel [value]="portfolios" [numVisible]="5">
-  <ng-template let-car pTemplate="item">
-    Content to display
+  <ng-template let-portfolio pTemplate="item">
+
+    <app-custom-carousel-slide [item]="portfolio"></app-custom-carousel-slide>
+
   </ng-template>
 </p-carousel>
 
+<div class="portfolio-contant">
+Portfolio Content
+</div>
 
-<!--<mat-carousel-->
-<!--  [autoplay]="false"-->
-<!--  [hideArrows]="false"-->
-<!--  [color]="'#ffffff'"-->
-<!--  [maxWidth]="'100%'"-->
-<!--  [useKeyboard]="true"-->
-<!--&gt;-->
-
-<!--  <mat-carousel-slide-->
-<!--    *ngFor="let item of portfolios"-->
-<!--    [overlayColor]="'#ffffff'"-->
-<!--    [hideOverlay]="false"-->
-<!--  >-->
-<!--    <div>{{ item?.title }}</div>-->
-<!--    <div>{{ item?.content }}</div>-->
-<!--  </mat-carousel-slide>-->
-
-<!--</mat-carousel>-->

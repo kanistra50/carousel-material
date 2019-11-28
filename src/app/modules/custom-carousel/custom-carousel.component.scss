@@ -1,5 +1,57 @@
 :host {
 
+  p-carousel::ng-deep {
+    .ui-carousel {
+
+      &-content {
+
+      }
+
+      &-items-content {
+        margin: 16px auto;
+        min-height: 60px;
+        box-shadow:
+          0px 4px 7px #DEDEDE,
+          inset 0px -1px 6px rgba(166, 166, 166, 0.2);
+      }
+
+      &-items-container {
+        min-height: 100%;
+      }
+
+      &-next-icon, &-prev-icon {
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+
+
+
+
+
+
+
+      // Zeroing 3th party styles;
+      &-next, &-prev {
+        border: none;
+        background: none;
+        &:hover {
+          background-color: initial !important;
+          box-shadow: none !important;
+        }
+        &:enabled:focus {
+          box-shadow: none !important;
+        }
+      }
+
+
+      &-dots-container {
+        display: none;
+      }
+    }
+  }
+
+
 
   @media screen and (max-width: 575px) {
 

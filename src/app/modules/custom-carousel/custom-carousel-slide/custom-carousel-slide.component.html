@@ -1,0 +1,11 @@
+<div class="custom-carousel-item">
+  <div class="custom-carousel-item__title">{{ item.title }}</div>
+  <div class="custom-carousel-item__client">
+    <span>{{ item.client }}</span>
+    <img *ngIf="item.isAlreadyViewed; else notViewed" src="../../assets/check-symbol.svg">
+    <ng-template #notViewed>
+      <span>...</span>
+    </ng-template>
+  </div>
+
+</div>

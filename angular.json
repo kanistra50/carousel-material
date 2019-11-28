@@ -71,11 +71,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "carousel-app:build"
+            "browserTarget": "matchinglink:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "carousel-app:build:production"
+              "browserTarget": "matchinglink:build:production"
             }
           }
         },
@@ -120,16 +120,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "carousel-app:serve"
+            "devServerTarget": "matchinglink:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "carousel-app:serve:production"
+              "devServerTarget": "matchinglink:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "carousel-app"
+  "defaultProject": "matchinglink"
 }
