@@ -7,15 +7,18 @@
     <app-custom-carousel></app-custom-carousel>
 
 
+    <div class="portfolio-content">
+      <ng-container *ngIf="portfolio | async; else notSelected">
+        <div class="portfolio-content__text" *ngIf="(portfolio | async).content; else noContent">
+          {{ (portfolio | async).content }}
+        </div>
+        <ng-template #noContent>
+          <span class="no-content">'{{ (portfolio | async).title }}' portfolio has no content</span>
+        </ng-template>
+      </ng-container>
 
-    <ng-container *ngIf="selectedPortfolio">
-      <div class="portfolio-content" *ngIf="selectedPortfolio.content; else noContent">
-        {{ selectedPortfolio.content }}
-      </div>
-      <ng-template #noContent>
-        <span class="no-content">'{{ selectedPortfolio.title }}' portfolio has no content</span>
-      </ng-template>
-    </ng-container>
+      <ng-template #notSelected>No one item was selected</ng-template>
+    </div>
 
 
   </app-user-content>

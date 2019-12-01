@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';;
 import {Portfolio} from '../models/Portfolio.model';
-import {BehaviorSubject, Observable} from 'rxjs';
+import {BehaviorSubject, Observable, Subject} from 'rxjs';
 
 @Injectable()
 export class SelectedPortfolioService {
