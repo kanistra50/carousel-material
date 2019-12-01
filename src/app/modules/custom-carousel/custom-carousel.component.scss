@@ -1,26 +1,18 @@
 :host {
 
-  $arrowButtonWidth: 48px;
   p-carousel::ng-deep {
     .ui-carousel {
 
       &-content {
-        overflow: hidden
-      }
 
-      &-item {
-        overflow: visible;
-      }
-
-      &-item-active {
-        z-index: 100;
       }
 
       &-items-content {
         margin: 16px auto;
-        min-height: $arrowButtonWidth;
-        box-shadow: -2px 2px 7px #DEDEDE;
-        overflow: initial;
+        min-height: 48px;
+        box-shadow:
+          -2px 2px 7px #DEDEDE,
+          inset 0px -1px 6px rgba(166, 166, 166, 0.3)
       }
 
       &-items-container {
@@ -29,23 +21,22 @@
 
       &-next-icon, &-prev-icon {
         &:hover {
-
           transform: scale(1.5);
         }
       }
 
+
+
+
+
+
+
       // Zeroing 3th party styles;
       &-next, &-prev {
-        position: absolute;
         border: none;
-        background: white;
-        width: $arrowButtonWidth;
-        height: $arrowButtonWidth;
-        margin: 0;
-        border-radius: 0;
-
+        background: none;
         &:hover {
-          background-color: white !important;
+          background-color: initial !important;
           box-shadow: none !important;
         }
         &:enabled:focus {
@@ -53,13 +44,6 @@
         }
       }
 
-      &-prev {
-        left: 0;
-      }
-
-      &-next {
-        right: $arrowButtonWidth;
-      }
 
       &-dots-container {
         display: none;

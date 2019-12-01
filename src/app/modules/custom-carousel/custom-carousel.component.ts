@@ -34,8 +34,9 @@ export class CustomCarouselComponent implements OnInit {
       this._markSelectedAsViewed();
     }
     this.selectedPortfolio = p;
-    this.selectedPortfolioService.setPortfolio(p);
     this.selectedPortfolio.isCurrentlySelected = true;
+
+    this.selectedPortfolioService.setPortfolio(this.selectedPortfolio);
   }
 
   private _markSelectedAsViewed() {
